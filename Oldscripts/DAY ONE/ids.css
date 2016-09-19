@@ -1,0 +1,37 @@
+/* Main Styles */
+p{ 
+font-family: Cursive;
+font-size: 14px;
+
+
+}
+/* Custom Styls */
+
+tr:nth-child(even)
+{ background-color: blue;
+
+}
+
+/*Specific Styles */
+#p1{
+font-size: 50px;
+font-weight:bold;
+color: slategrey
+}
+#p2 {
+font-size: 25px;
+font-weight: italic;
+color: red;
+font-family: fantasy;
+
+}
+table{
+    width: 100;
+}
+
+h1 h2 h3{
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 25px;
+
+
+}

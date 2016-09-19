@@ -1,0 +1,30 @@
+/* main styles */
+body
+{
+    margin: 20px;
+background-color: mediumseagreen;
+font-family: fantasy;
+
+}
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.yellowMed {
+    color: yellow;
+    font-size: 14pt;
+}
+
+.yellowLg {
+    color: yellow;
+    font-size: 20pt;
+}
+
+.almostBaconBrown{
+color: #C87F32;
+
+
+}
+
+.corporateBlue {
+    background-color: blue;
+}
