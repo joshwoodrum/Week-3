@@ -1,0 +1,31 @@
+<html>
+<head>  
+<title>Guessing Game</title>
+   <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="guessingGame.js"></script>
+
+</script>
+
+</head>
+<body>
+<div id="intro">
+        <p>Welcome to the greatest Guessing Game ever! Click that sexy little button to start!</p>
+        <button id="startGame">START GAME</button>
+    </div>
+
+    <div id="game">
+    <fieldset>  
+      <label> What is your guess?
+          <input type="text" maxlength="2" id="tbxGuess" placeholder="from 1 to 10"/>
+          </input>
+<br/><br/>
+<button id="btnGuess">GUESS!!</button>
+<br/><br/>
+<span id="message"></span>
+<button onclick="startOver()"> Start Over!</button>
+    </fieldset>
+        </div>
+</body>
+
+
+</html>
