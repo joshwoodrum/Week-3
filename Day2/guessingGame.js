@@ -14,6 +14,9 @@ function handleGuess() {
     var guess = $("#tbxGuess").val();
     if (+guess == answer) {
         $("#message").text("A Winner Is You");
+        $("#tbxGuess").hide();
+        
+
 
     }
     else {
