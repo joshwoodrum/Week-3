@@ -1,11 +1,86 @@
-#sunny{
-    background-image: url(https://sc.mogicons.com/share/sunny-emoticon-245.jpg);
-    background-size: 100%;
-    background-repeat:no-repeat;
+
+.navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+    }
+    
+.text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+   
+    
+    footer {
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+.caption {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    width: 100%;
 }
 
+.text {
+  position: absolute;
+  top: 25%;
+  width: 100%;
+  left: 0;
 
-div {
-    height: 500px;
-  border-radius: 6px;
 }
+
+.status{
+  position: absolute;
+  top: 45%;
+  width: 100%;
+  left: 0;
+}
+
+.tempMax1{
+  position: absolute;
+  top: 65%;
+  width: 100%;
+  left: 50;
+  
+}
+
+.min{
+  position: absolute;
+  top: 75%;
+  width: 100%;
+  left: 50;
+}
+
+.percent{
+  position: absolute;
+  top: 60%;
+  width: 100%;
+  left: 180;
+}
+
+.status2{
+  position: absolute;
+  top: 75%;
+  width: 100%;
+  left: 180;
+  
+}
+
+.max{
+  position: absolute;
+  top: 80%;
+  width: 100%;
+  left: 300;
+
+}
+
+.tempMax2{
+  position: absolute;
+  top: 70%;
+  width: 100%;
+  left: 300;
+
+}  
