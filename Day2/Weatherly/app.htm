@@ -49,7 +49,89 @@ $.ajax({
 });
 
 
+
 </script>
+<body>
+
+    <nav class="navbar navbar-default">
+       
+            <div class="navbar-header">
+            
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                Lookup Weather for Postal Code:
+            </div>
+            <div class="col-md-8">
+                <label>Enter a postal code: <input type="text" id="postalCode" placeholder="postal code" /></label>
+                <button type="button" id="lookupWeatherForPostalCode">Lookup</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        // ***************************
+        // **  Google Web Services  **
+        // ***************************
+
+        function lookupLatLong_Complete(result) {
+            var latitude = result.results["0"].geometry.location.lat;
+            var longitude = result.results["0"].geometry.location.lng;
+            console.log("The lat and long is " + latitude + ", " + longitude);
+       
+    
+
+ }
+
+        function lookupLatLong(city, state, postalCode) {
+            // Create the address.
+            var address = "";
+            if (postalCode.length != 0) {
+                address = postalCode.trim();
+            }
+            else if (city.length != 0 && state != 0) {
+                address = city.trim() + ", " + state;
+            }
+            else {
+                return; // they didn't give me anything valid, so exit
+            }
+
+            // Call Google's API.
+            var googleUrl = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "&key=AIzaSyAWJfcC5rhpOzJa9lZAYEY9UhniD2N01nA";
+
+            var request = {
+                url: googleUrl,
+                success: lookupLatLong_Complete
+            };
+
+            $.ajax(request);
+        }
+
+        // **********************
+        // **  Event Handlers  **
+        // **********************
+        function lookupWeatherForPostalCode_Click() {
+            var pcode = $("#postalCode").val();
+            lookupLatLong("", "", pcode);
+        }
+
+        // ***********************
+        // **  Document ready.  **
+        // ***********************
+
+        $(function() {
+            $("#lookupWeatherForPostalCode").on("click", lookupWeatherForPostalCode_Click)
+        });
+
+        </script>
+
+</body>
+
+</html>
 
 
   <nav class="navbar navbar-inverse">
